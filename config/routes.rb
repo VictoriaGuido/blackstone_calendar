@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-#  get 'entries/index'
-
-#  get 'entries/show'
-
-  #resources :feeds
-
   resources :feeds do
     member do
       resources :entries, only: [:index, :show]
