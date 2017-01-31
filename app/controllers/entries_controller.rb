@@ -1,3 +1,4 @@
+# app/controllers/entries_controller.rb
 class EntriesController < ApplicationController
   before_action :set_feed, only: :index
 
