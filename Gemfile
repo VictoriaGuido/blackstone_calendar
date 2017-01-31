@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 # gem feed jira and twitter boostrap rails
 gem 'feedjira'
 gem 'twitter-bootstrap-rails'
+gem 'coffee-script-source', '1.8.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -50,6 +51,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'feedjira'
-gem 'twitter-bootstrap-rails'

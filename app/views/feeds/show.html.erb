@@ -1,18 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h4>
   <strong>Name:</strong>
   <%= @feed.name %>
-</p>
-
-<p>
   <strong>Url:</strong>
   <%= @feed.url %>
-</p>
-
-<p>
   <strong>Description:</strong>
   <%= @feed.description %>
+</h4>
+
+
+<div class="container">
+  <% @feed.entries.each do |entry| %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= entry.published %><%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+</p>
+<p>
+
 </p>
 
 <%= link_to 'Edit', edit_feed_path(@feed) %> |
